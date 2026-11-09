@@ -80,7 +80,7 @@
   <div class="container">
     <p class="eyebrow">Selected work</p>
     <h2 class="section-title" id="projects-title">Projects</h2>
-    <p class="section-lede">Three projects, one ticket each. Open any of them.</p>
+    <p class="section-lede">Six projects, one ticket each. Open any of them.</p>
 
     <ul class="tickets">
       <li>
@@ -88,7 +88,7 @@
           <div class="ticket__band"><span>All-day pass</span><span>No. 001</span></div>
           <div class="ticket__body">
             <h3 class="ticket__title">Durable Job Engine</h3>
-            <p class="ticket__text">Crash-safe job queue on Postgres with worker leases, fencing tokens, retries and a human approval step. 20 database invariant checks, plus load and crash tests.</p>
+            <p class="ticket__text">Crash-safe job queue on Postgres with worker leases, heartbeats, fencing tokens, retries and a human approval step. 20 database invariant checks; load and chaos tests sustained 1,600 jobs/s with no lost jobs.</p>
             <ul class="tags">
               <li class="tag tag--pink">Go</li>
               <li class="tag tag--green">Distributed systems</li>
@@ -107,11 +107,72 @@
         <article class="ticket">
           <div class="ticket__band"><span>All-day pass</span><span>No. 002</span></div>
           <div class="ticket__body">
+            <h3 class="ticket__title">Job Monitor</h3>
+            <p class="ticket__text">Watches the career pages of about 120 companies and scores new postings against my experience. Runs on the Durable Job Engine, uses Claude Haiku for requirement extraction, and deploys to AWS with Terraform.</p>
+            <ul class="tags">
+              <li class="tag tag--pink">Go</li>
+              <li class="tag tag--green">AWS</li>
+              <li class="tag tag--gold">Terraform</li>
+            </ul>
+          </div>
+          <div class="ticket__perf" aria-hidden="true"></div>
+          <div class="ticket__foot">
+            <span class="ticket__note">Private repo</span>
+            <div class="barcode" aria-hidden="true"></div>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="ticket">
+          <div class="ticket__band"><span>All-day pass</span><span>No. 003</span></div>
+          <div class="ticket__body">
+            <h3 class="ticket__title">Flashcards</h3>
+            <p class="ticket__text">Offline-first iPhone flashcard app with FSRS scheduling, Supabase sync, and Claude features: cards from photos, multiple-choice and typed-answer grading. 141 unit tests.</p>
+            <ul class="tags">
+              <li class="tag tag--pink">Swift</li>
+              <li class="tag tag--gold">SQLite</li>
+              <li class="tag tag--green">Supabase</li>
+            </ul>
+          </div>
+          <div class="ticket__perf" aria-hidden="true"></div>
+          <div class="ticket__foot">
+            <a class="ticket__link" href="https://github.com/skifast/flashcards" rel="noopener">View on GitHub<span class="sr-only">: Flashcards</span> →</a>
+            <div class="barcode" aria-hidden="true"></div>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="ticket">
+          <div class="ticket__band"><span>All-day pass</span><span>No. 004</span></div>
+          <div class="ticket__body">
+            <h3 class="ticket__title">LiftLog</h3>
+            <p class="ticket__text">iPhone weightlifting tracker. Claude builds the training plan from an intake flow, with a home/gym equipment toggle; I log every set, with history and progress charts.</p>
+            <ul class="tags">
+              <li class="tag tag--pink">Swift</li>
+              <li class="tag tag--green">SwiftUI</li>
+              <li class="tag tag--gold">Claude API</li>
+            </ul>
+          </div>
+          <div class="ticket__perf" aria-hidden="true"></div>
+          <div class="ticket__foot">
+            <a class="ticket__link" href="https://github.com/skifast/liftlog" rel="noopener">View on GitHub<span class="sr-only">: LiftLog</span> →</a>
+            <div class="barcode" aria-hidden="true"></div>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="ticket">
+          <div class="ticket__band"><span>All-day pass</span><span>No. 005</span></div>
+          <div class="ticket__body">
             <h3 class="ticket__title">Problem Tracker</h3>
-            <p class="ticket__text">A Python tool for tracking practice problems, with LeetCode sync, SM-2 spaced-repetition scheduling, a dashboard and a daily email.</p>
+            <p class="ticket__text">Syncs my LeetCode and NeetCode history into SQLite and picks daily review problems. I implemented SM-2 and compared it with my own ranking on 354 problems before choosing which to keep.</p>
             <ul class="tags">
               <li class="tag tag--gold">Python</li>
-              <li class="tag tag--pink">Spaced repetition</li>
+              <li class="tag tag--green">SQLite</li>
+              <li class="tag tag--pink">Playwright</li>
             </ul>
           </div>
           <div class="ticket__perf" aria-hidden="true"></div>
@@ -124,7 +185,7 @@
 
       <li>
         <article class="ticket">
-          <div class="ticket__band"><span>All-day pass</span><span>No. 003</span></div>
+          <div class="ticket__band"><span>All-day pass</span><span>No. 006</span></div>
           <div class="ticket__body">
             <h3 class="ticket__title">MP3 Frame Counter</h3>
             <p class="ticket__text">A TypeScript API that hand-parses MP3 frame headers to count MPEG-1 Layer III frames, with no parsing libraries. 49 tests.</p>

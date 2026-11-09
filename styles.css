@@ -220,9 +220,10 @@ a:focus-visible {
   list-style: none;
 }
 .tickets > li { display: flex; flex: 1 1 300px; min-width: 0; }
-.tickets > li:nth-child(1) { --tilt: -1deg; }
-.tickets > li:nth-child(2) { --tilt: 0.8deg; }
-.tickets > li:nth-child(3) { --tilt: -0.6deg; }
+/* tilt pattern repeats every three tickets */
+.tickets > li:nth-child(3n+1) { --tilt: -1deg; }
+.tickets > li:nth-child(3n+2) { --tilt: 0.8deg; }
+.tickets > li:nth-child(3n)   { --tilt: -0.6deg; }
 
 .ticket {
   display: flex;
@@ -302,6 +303,7 @@ a:focus-visible {
   padding: 10px 24px 14px;
 }
 .ticket__link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+.ticket__note { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; opacity: 0.7; } /* stands in for the link on private repos */
 
 .barcode {
   width: 72px;
